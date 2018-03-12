@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>asterRIDE</title>
+
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <nav class="nav-bar sticky-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-md-auto padding-right-0">
+                        <div class="logo">
+                            <a href="index.html" title="Brand name">
+                                <img src="img/logo.png" alt="">
+                            </a>
+                            <p class="logo-slogan-inmobile">World Class Ground Transportation</p>
+                        </div>
+                        <a href="javascript:void(0)" class="menu-toggle fa fa-bars"></a>
+                    </div>
+                    <div class="col logo-slogan">
+                        <p class="margin-0">World Class Ground Transportation</p>
+                    </div>
+                    <div class="col-auto book-btn-nav ml-auto">
+                        <a href="#book-now" class="book-now-btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul class="top-nav">
+                            <li>
+                                <a href="javascript:void(0)" title="About">About</a>
+                                <ul>
+                                    <li>
+                                        <a href="about-us.html" title="About Us">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html" title="News">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="media-kit.html" title="Media Kit">Media Kit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="cities.html" title="Cities">Cities</a>
+                            </li>
+                            <li>
+                                <a href="corporate.html" title="Corporate">Corporate</a>
+                            </li>
+                            <li>
+                                <a href="events.html" title="Events">Events</a>
+                            </li>
+                            <li>
+                                <a href="travel-agents.html" title="Travel Agents">Travel Agents</a>
+                            </li>
+                            <li>
+                                <a href="drive-with-us.html" title="Drive with us">Drive with us</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="active" title="More">More</a>
+                                <ul>
+                                    <li>
+                                        <a href="book-with-us.html" class="active" title="Book with Us">Book with Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="home-ride-discount.html" title="Home 1st ride discount form">Home 1st ride discount form</a>
+                                    </li>
+                                    <li>
+                                        <a href="corporate-form.html" title="Corporate form">Corporate form</a>
+                                    </li>
+                                    <li>
+                                        <a href="events-form.html" title="Events form">Events form</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="contac-us-link">
+                                <a href="#contact-us" title="Contact Us">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="book-withus-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="booking-form-title">Book A Ride and Love How You Go</h3>
+                        <div class="book-with-usform">
+                            <form>
+                                <h2 class="form-title">You'll love getting there – let's get started.*</h2>
+                                <div class="vehicle-type-section">
+                                    <div class="row align-items-end">
+                                        <div class="col-md-8">
+                                            <div class="row align-items-end">
+                                                <div class="col-2 calender-img">
+                                                    <img src="img/step-icon-02.png" alt="">
+                                                </div>
+                                                <div class="col-md-5 mb-2-mobile">
+                                                    <label class="mid-caption">Pick-up Date and Time</label>
+                                                    <div class="date" id="datetimepicker1" data-target-input="nearest">
+                                                        <input type="text" data-target="#datetimepicker1" data-toggle="datetimepicker" class="gradient-field gradient-box-full form-control datetimepicker-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 mb-2-mobile">
+                                                    <label class="large-caption">Vehicle Selection</label>
+                                                    <div id="vehicleData" class="custom-content-dropdown"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="row align-items-end">
+                                                <div class="col-md-5 mb-2-mobile">
+                                                    <label class="mid-caption">Bags</label>
+                                                    <input type="number" min="0" class="gradient-field gradient-box-full number-field form-control">
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <label class="mid-caption"># of Child Seats</label>
+                                                    <input type="number" min="0" class="gradient-field gradient-box-full number-field form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="entermorinfo-section">
+                                    <h3 class="book-form-subtitle">You're almost ready to hit the ROAD!
+                                        <span class="blue-text"> Just a bit more info:</span>
+                                    </h3>
+                                    <div class="row mb-4 booking-form-row">
+                                        <div class="col-md-6"> 
+                                            <div class="row mb-4 align-items-end">
+                                                <div class="col field-lrg-icon">
+                                                    <label class="large-caption">Pickup Location</label>
+                                                    <input type="text" class="gradient-field gradient-box-full form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-end">
+                                                <div class="col field-lrg-icon mb-2-mobile">
+                                                    <label class="large-caption">Dropoff Location</label>
+                                                    <input type="text" class="gradient-field gradient-box-full form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 custom-offset-right">
+                                            <div class="row mb-4 align-items-end custom-offest">
+                                                <div class="col-md-6 mb-2-mobile">
+                                                    <label class="large-caption">Airline & Flight #</label>
+                                                    <input type="text" class="gradient-field gradient-box-full form-control">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="large-caption">Meet & Greet?</label>
+                                                    <input type="text" class="gradient-field gradient-box-full form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row align-items-end custom-offest">
+                                                <div class="col-md-6">
+                                                    <label class="large-caption">Return Trip?</label>
+                                                    <input type="text" class="gradient-field gradient-box-full form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="book-form-subtitle">
+                                        <span class="orange-text">Tell Us About You </span>
+                                    </h3>
+                                    <div class="row booking-form-row">
+                                        <div class="col-md-6">
+                                            <div class="row mb-3">
+                                                <div class="col-md-12 custom-offset-left">
+                                                    <label class="large-caption">Passenger First & Last Name</label>
+                                                    <input type="text" class="orange-field form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-9 custom-offset-left">
+                                                    <label class="large-caption">Passenger Email</label>
+                                                    <input type="text" class="orange-field form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-9 custom-offset-left">
+                                                    <label class="large-caption">Passenger Cellphone</label>
+                                                    <input type="text" class="orange-field form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12 custom-offset-left">
+                                                    <label class="large-caption">Special Instruction</label>
+                                                    <textarea name="" class="orange-text-area form-control" cols="30" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6"> 
+                                            <div class="row mb-3">
+                                                <div class="col-md-9">
+                                                    <label class="large-caption">Booking Agent Email</label>
+                                                    <input type="text" class="orange-field form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-9">
+                                                    <label class="large-caption">Booking Agent Phone #</label>
+                                                    <input type="text" class="orange-field form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-md-6">
+                                                    <label class="large-caption orange-text">Promo Code</label>
+                                                    <input type="text" class="orange-field form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6 ml-auto book-with-usbtn custom-offset-right">
+                                                    <button class="large-gradient-btn btn-block">GO!</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="blue-bottom-textbar">*no credit card required until final booking . Convenient electronic payment, paperless
+                                        receipts. <span class="block-line"> Child Seats and Meet and Greet options may require an extra fee of $35 per request.</span>
+                                    </h3>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="contact-section" id="contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm contact-us-title">
+                        <h2>Contact
+                            <span class="show-on-mobile">with</span> Us</h2>
+                    </div>
+                    <div class="col-auto contact-us-icon hide-on-mobile">
+                        <p>Call, email or book online or on our app</p>
+                        <div class="contact-icon">
+                            <a href="" title="Phone">
+                                <img src="img/contact-icon-01.png" alt="">
+                            </a>
+                            <a href="" title="Message">
+                                <img src="img/contact-icon-02.png" alt="">
+                            </a>
+                            <a href="" title="Desktop">
+                                <img src="img/contact-icon-03.png" alt="">
+                            </a>
+                            <a href="" title="Mobile">
+                                <img src="img/contact-icon-04.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col contact-us-phone-email">
+                        <h3>(844) 589-7433</h3>
+                        <p>
+                            <a href="mailto:reservations@asterRIDE.com">reservations@asterRIDE.com</a>
+                        </p>
+                    </div>
+
+                    <ul class="social-link show-on-mobile">
+                        <li>
+                            <a href="https://www.facebook.com/" title="facebook" class="fa fa-facebook"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/" title="linkedin" class="fa fa-linkedin"></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" title="twitter" class="fa fa-twitter"></a>
+                        </li>
+                        <li class="yelp">
+                            <a href="http://yelp.com/" title="yelp">
+                                <img src="img/yelp.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-lg-4 hide-on-mobile">
+                        <ul class="footer-link">
+                            <li>
+                                <a href="about-us.html" title="About Us">About Us</a>
+                            </li>
+                            <li>
+                                <a href="travel-agents.html" title="Travel Agents">Travel Agents</a>
+                            </li>
+                            <li>
+                                <a href="cities.html" title="Cities">Cities</a>
+                            </li>
+                            <li>
+                                <a href="news.html" title="News">News</a>
+                            </li>
+                            <li>
+                                <a href="events.html" title="Events">Events</a>
+                            </li>
+                            <li>
+                                <a href="blog.html" title="Blog">Blog</a>
+                            </li>
+                            <li>
+                                <a href="drive-with-us.html" title="Drive With Us">Drive With Us</a>
+                            </li>
+                            <li>
+                                <a href="term-of-us.html" title="Terms of Use">Terms of Use</a>
+                            </li>
+                            <li>
+                                <a href="corporate.html" title="Corporate">Corporate</a>
+                            </li>
+                            <li>
+                                <a href="affliate-partner.html" title="Affliate Partners">Affliate Partners</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5 col copy-social center-align">
+                        <ul class="social-link hide-on-mobile">
+                            <li>
+                                <a href="https://www.facebook.com/" title="facebook" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" title="linkedin" class="fa fa-linkedin"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" title="twitter" class="fa fa-twitter"></a>
+                            </li>
+                            <li class="yelp">
+                                <a href="http://yelp.com/" title="yelp">
+                                    <img src="img/yelp.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="web-address">
+                            <a href="http://www.asterride.com/" target="_blank">www.asterRIDE.com</a>
+                        </p>
+                        <p class="web-address termof-us-mobile show-on-mobile">
+                            <a href="terms-of-use.html" target="_blank">Terms of Use</a>
+                        </p>
+                        <p class="copy-right">
+                            <span>asterRIDE LLC</span>
+                            Created by Charmed Minds, copyright © 2018
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col center-align">
+                        <div class="App-store-link">
+                            <h5>Download App</h5>
+                            <p>
+                                <a href="">
+                                    <img src="img/apple-store.png" alt="">
+                                </a>
+                            </p>
+                            <p>
+                                <a href="">
+                                    <img src="img/google-store.png" alt="">
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/popper.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/moment.min.js" type="text/javascript"></script>
+    <script src="js/tempusdominus-bootstrap-4.min.js" type="text/javascript"></script>
+    <script src="js/jquery.bxslider.js" type="text/javascript"></script>
+    <script src="js/jquery.appear.js" type="text/javascript"></script>
+    <script src="js/parallax.js" type="text/javascript"></script>
+    <script src="js/jquery.ddslick.min.js" type="text/javascript"></script>
+    <script src="js/custom-script.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>
